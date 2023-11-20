@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bitter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  max-width: 1400px;
+  padding-inline: 5rem;
+  width: 100%;
+  margin-top: 10rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header login";
+  justify-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.header .title {
+  font-size: 5.1rem;
+  word-spacing: 10px;
+}
+
+.header .text {
+  font-weight: 300;
+}
+
+.header .media-social {
+  margin-top: 1.5rem;
+}
+
+.media-social a {
+  margin-right: 0.5rem;
+}
+
+.login {
+  grid-area: login;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.login .login-element {
+  margin-block: 1.3rem;
+  max-width: 400px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.login-element label {
+  font-weight: 300;
+}
+
+.login-element input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  outline: none;
+  padding-left: 0.3rem;
+  border-radius: 3px;
+  color: #1e3321;
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.login a:hover {
+  color: blue;
+}
+
+.login .btn {
+  display: block;
+  margin: 1.3rem 0 0;
+  padding: 0.5rem;
+  background-color: #1e3321;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login .btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.login p {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "login login";
+    margin: 3rem auto;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .login {
+    margin-top: 5rem;
+    grid-area: login;
+  }
+}
